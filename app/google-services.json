@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "875063796705",
+    "firebase_url": "https://poetic-archive-321519-default-rtdb.firebaseio.com",
+    "project_id": "poetic-archive-321519",
+    "storage_bucket": "poetic-archive-321519.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875063796705:android:6fe7b40d7bd23f2d0e28a0",
+        "android_client_info": {
+          "package_name": "com.example.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "875063796705-ptfm2bb8qf5lh6ti6q4klbap6l0f1g41.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUESyGxOL_1rP7wFxXSk5LpTLW1cgl0KY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "875063796705-ptfm2bb8qf5lh6ti6q4klbap6l0f1g41.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
