@@ -3,14 +3,11 @@ package com.example.firebase;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlarmManager;
 import android.app.AlertDialog;
-import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -83,10 +80,10 @@ public class MainActivity extends AppCompatActivity {
         btnChoose = (Button) findViewById(R.id.btnChoose);
         imageView = (ImageView) findViewById(R.id.imgView);
         btnChoose = (Button) findViewById(R.id.btnChoose);
+        btn = (Button) findViewById(R.id.btnSalir2);
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
-
-        btnUrl = (Button)findViewById (R.id.btnFirebase);
+        btnUrl = (Button)findViewById (R.id.btnFirebase2);
         url="https://firebase.google.com/?hl=es";
         btnUrl.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn = (Button) findViewById(R.id.btnSalir2);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
@@ -262,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
             progressDialog.setTitle("Uploading...");
             progressDialog.show();
 
-            StorageReference ref = storageReference.child("images/"+ UUID.randomUUID().toString());
+            StorageReference ref = storageReference.child("platillos/"+ UUID.randomUUID().toString());
             ref.putFile(filePath)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
@@ -329,6 +325,11 @@ public class MainActivity extends AppCompatActivity {
         nombre.setText("");
         precio.setText("");
         detalles.setText("");
+    }
+    public void cerrarsesion(View view)
+    {
+        Intent back = new Intent(this, login.class);
+        startActivity(back);
     }
     public static class platillo {
         public String id;
