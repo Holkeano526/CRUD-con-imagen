@@ -20,7 +20,7 @@
         android:id="@+id/lv_datosPlatillos"
         android:layout_width="224dp"
         android:layout_height="150dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="8dp"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/btnSalir2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +59,7 @@
         android:id="@+id/btnSalir2"
         android:layout_width="78dp"
         android:layout_height="35dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="36dp"
         android:text="Salir"
         android:textAlignment="center"
         android:textSize="12sp"
@@ -72,77 +72,80 @@
         android:id="@+id/txtNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="76dp"
+        android:layout_marginEnd="100dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/txtPrecio"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.723" />
+        app:layout_constraintVertical_bias="0.822" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="76dp"
         android:text="Nombre:"
-        app:layout_constraintEnd_toStartOf="@+id/txtNombre"
-        app:layout_constraintHorizontal_bias="0.425"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="460dp"
-        android:text="Detalles:"
-        app:layout_constraintBottom_toTopOf="@+id/btnFirebase"
-        app:layout_constraintEnd_toStartOf="@+id/txtDetalles"
-        app:layout_constraintHorizontal_bias="0.416"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="48dp"
         android:text="Precio:"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/txtPrecio"
-        app:layout_constraintHorizontal_bias="0.373"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.055" />
+        app:layout_constraintVertical_bias="0.151" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="36dp"
+        android:text="Detalles:"
+        app:layout_constraintBottom_toTopOf="@+id/btnChoose"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/txtDetalles"
         android:layout_width="213dp"
         android:layout_height="46dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/btnChoose"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView4" />
 
     <EditText
         android:id="@+id/txtPrecio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="36dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/txtDetalles"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView3" />
 
     <Button
         android:id="@+id/btnChoose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="24dp"
         android:text="Escoge"
         app:layout_constraintBottom_toTopOf="@+id/imgView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -153,10 +156,9 @@
         android:id="@+id/imgView"
         android:layout_width="173dp"
         android:layout_height="91dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 

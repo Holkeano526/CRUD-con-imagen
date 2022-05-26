@@ -3,7 +3,9 @@ package com.example.firebase;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlarmManager;
 import android.app.AlertDialog;
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -309,17 +311,17 @@ public class MainActivity extends AppCompatActivity {
         String det=detalles.getText().toString();
 
         if(nom.equals("")){
-            nombre.setError("Required");
+            nombre.setError("Agregue un nombre");
         }
         else if(pre.equals("")){
-            precio.setError("Required");
+            precio.setError("Agregue un precio");
         }
         else if(det.equals("")){
-            detalles.setError("Required");
+            detalles.setError("Agregue detalles");
         }
         else if(imageView.getDrawable() == null)
         {
-            Toast.makeText(MainActivity.this, "FALTA AGREGAR UNA IMAGEN",Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Necesita agregar una imagen",Toast.LENGTH_SHORT).show();
         }
 
     }
