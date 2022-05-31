@@ -65,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
     platillo platilloSelected;
 
     Button btn;
-    Button btnUrl;
 
 
     @Override
@@ -83,16 +82,6 @@ public class MainActivity extends AppCompatActivity {
         btn = (Button) findViewById(R.id.btnSalir2);
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
-        btnUrl = (Button)findViewById (R.id.btnFirebase2);
-        url="https://firebase.google.com/?hl=es";
-        btnUrl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Uri uri  = Uri.parse(url);
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
-            }
-        });
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
