@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         btn = (Button) findViewById(R.id.btnSalir2);
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
-
+/*
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                 dialog.show();
             }
         });
-
+        */
         listaPlatillo = (ListView)findViewById(R.id.lv_datosPlatillos);
 
         listaPlatillo.setOnItemClickListener(new AdapterView.OnItemClickListener() { //para seleccionar desde nuestra lista
@@ -315,10 +315,13 @@ public class MainActivity extends AppCompatActivity {
         precio.setText("");
         detalles.setText("");
     }
-    public void cerrarsesion(View view)
-    {
+    public void cerrarsesion(View view) {
         Intent back = new Intent(this, login.class);
         startActivity(back);
+    }
+    public void goList(View view) {
+        Intent  golist = new Intent(this, activity_lista.class);
+        startActivity(golist);
     }
     public static class platillo {
         public String id;
